@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>图片上传</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        form{
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<form class="form-horizontal" role="form" action="{:url('home/Photo/Save')}" enctype="multipart/form-data" method="post">
+
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">图片标题；</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="title" placeholder="请输入图片标题" name="title">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">图片分类：</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="brand" placeholder="请输入图片分类" name="brand">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label  class="col-sm-2 control-label">图片上传；</label>
+        <div class="col-sm-3">
+        <input type="file" name="image">
+        </div>
+    </div>
+    
+
+
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-3">
+            <button type="submit" class="btn btn-default">提交</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

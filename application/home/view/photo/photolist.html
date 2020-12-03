@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>图片列表页面</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div align="right" style="margin: 30px;">
+    <a href="{:url('home/Photo/Create')}" style="margin-right: 20px" >添加图片</a>
+</div>
+
+<div>
+    <form action="{:url('home/Photo/searchp')}" method="post">
+        <input type="text" name="searchp">
+        <input type="submit">
+    </form>
+    <form action="{:url('home/Photo/search')}" method="post">
+        <input type="text" name="search">
+        <input type="submit">
+    </form>
+</div>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>图片</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {foreach $photo as $vo}
+    <tr>
+        <td><img src="{$vo.image}" alt="" width="50px"></td>
+        <td>
+            <a href="">删除</a>
+        </td>
+    </tr>
+    {/foreach}
+    </tbody>
+</table>
+
+{$phot->render()}
+
+</body>
+</html>
